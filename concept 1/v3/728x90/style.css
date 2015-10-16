@@ -3,8 +3,8 @@
 
 #container {
 	position: absolute;
-	width: 300px;
-	height: 250px;
+	width: 728px;
+	height: 90px;
 	border:solid;
 	border-color:#58585a;
 	border-width:1px;
@@ -23,8 +23,8 @@ body{
 	top:0px;
 	left:0px;
 	background-image: url("lady.jpg");
-	width:300px;
-	height:250px;
+	width:728px;
+	height:90px;
 	z-index: -4;
 }
 
@@ -33,8 +33,8 @@ body{
 	position: absolute;
 	top:0px;
 	left:0px;
-	width: 300px;
-	height: 250px;
+	width: 728px;
+	height: 90px;
 }
 
 #greenMask {
@@ -50,11 +50,11 @@ body{
 
 #green {
 	position: absolute;
-	top:20px;
+	top:0px;
 	left:-320px;
 	background-image: url("green.png");
-	width:341px;
-	height:250px;
+	width:728px;
+	height:90px;
 	overflow: hidden;
 }
 
@@ -93,7 +93,7 @@ opacity: 0;
 
 #product {
 opacity: 1;
-left:300px;	
+left:800px;	
 z-index:-1;
 }
 
@@ -101,28 +101,22 @@ z-index:-1;
 #endWater {
 position: absolute;
 opacity: 0;
-left:80px;	
+left:0px;	
 top:30px;
 }
 
-#text_0, #text_1, #text_2, #all_good{
+#text_0, #text_1, #text_2 {
 position: absolute;
-left:-200px;
+left:-800px;
 top:0px;
 }
 
-.hidden {
+#all_good {
 position: absolute;
+left:0px;
+top:0px;	
 opacity: 0;
-top:0;
-left:0;
 }
-
-#textHolder {
-
-
-}
-
 
 #can {
 position: absolute;
@@ -138,8 +132,20 @@ opacity: 1;
 	opacity: 0;
 }
 
+.hidden {
+position: absolute;
+opacity: 0;
+top:0;
+left:0;
+}
+
+#textHolder {
+
+	
+}
+
+
 #logo {
-opacity: 1;
 z-index:0;
 }
 

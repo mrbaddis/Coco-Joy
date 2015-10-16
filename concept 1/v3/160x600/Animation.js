@@ -56,12 +56,12 @@ home_animation = (function() {
 		
 	function frame1()
 	{
-		TweenLite.to(green, 0.5, {left:0, delay:0, ease: Expo.easeOut});	
+		TweenLite.to(green, 0.5, {left:-23, delay:0, ease: Expo.easeOut});	
 
 
    // == show text ==
    var i;
-    for (i = 1; i < 23; i++) {
+    for (i = 1; i < 18; i++) {
       var j = i+2
 
       		TweenLite.to("txt_"+i, .2, {opacity:1, delay: .1*i, ease: Expo.easeOut});
@@ -71,20 +71,22 @@ home_animation = (function() {
 
 
    var x;
-    for (x = 1; x < 22; x++) {
-      var j = x+2
+    for (x = 1; x < 17; x++) {
+      var j = x+1.5
 
-     		TweenLite.to("txt_"+x, .2, {opacity:0, delay: .1*j, ease: Expo.easeOut});
+     		TweenLite.to("txt_"+x, .1, {opacity:0, delay: .1*j, ease: Expo.easeOut});
 
     	}
+
+
 
 		TweenLite.delayedCall(3.6, frame2);
 	}
 	
 	function frame2()
 	{
-
 		TweenLite.to(textHolder, 0.2, {opacity: 0, top:0, delay:0});
+
 		TweenLite.to(green, 0.2, {left:0, delay:0});	
 		TweenLite.to(green, 0.2, {opacity:0, delay:0});
 		TweenLite.to(lady, 0.2, {opacity:0, delay:0});	
@@ -98,8 +100,7 @@ home_animation = (function() {
 	{	
 
 		TweenLite.to(can, 0.2, {delay: 0, top:0, ease: Expo.easeOut}); 
-		TweenLite.to(water, 0.5, {delay: 0, opacity:1, top:0, scaleX:1, scaleY:1, ease: Expo.easeOut}); 
-		//TweenLite.to(water_out, 0.3, {delay: 0, opacity:0, top:0, scaleX:2, scaleY:2, ease: Expo.easeOut}); 
+		TweenLite.to(water, 0.5, {delay: 0, opacity:1, top:200, left:-163, scaleX:1, scaleY:1, ease: Expo.easeOut}); 
 
 		TweenLite.delayedCall(3, frame4);	
 	}
@@ -116,7 +117,7 @@ home_animation = (function() {
 	function frame5()
 	{	
 
-		TweenLite.to(endWater, 0.5, {left:0, top:0, scaleX:1, scaleY:1, opacity:1, delay:0.3, ease: Expo.easeOut});
+		TweenLite.to(endWater, 0.5, {left:0, top:0, scaleX:1, scaleY:1, opacity:1, delay:0.2, ease: Expo.easeOut});
 		//TweenLite.to(endWater_two, 0.5, {left:0, top:0, scaleX:2, scaleY:2, opacity:0, delay:0.3, ease: Expo.easeOut});
 
 		TweenLite.to(product, 0.3, {left:0, delay:0, ease: Expo.easeOut});

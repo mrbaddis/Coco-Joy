@@ -43,7 +43,7 @@ home_animation = (function() {
 				Enabler.exit("clickTag1");
 			});
 
-			TweenLite.to(endWater, 0, {scaleX:0, scaleY:0,});
+			TweenLite.to(endWater, 0, {scaleX:0, left:270, scaleY:0,});
 			//TweenLite.to(water_out, 0, {scaleX:0, scaleY:0,});
 
 			TweenLite.to(water, 0, {delay: 0, scaleX:0, scaleY:0}); 
@@ -56,12 +56,13 @@ home_animation = (function() {
 		
 	function frame1()
 	{
-		TweenLite.to(green, 0.5, {left:0, delay:0, ease: Expo.easeOut});	
+		TweenLite.to(green, 0.5, {left:109, delay:0, ease: Expo.easeOut});	
+		TweenLite.to(logo, 0.3, {opacity:1, delay:0.2});
 
 
-   // == show text ==
+
    var i;
-    for (i = 1; i < 23; i++) {
+    for (i = 0; i < 15; i++) {
       var j = i+2
 
       		TweenLite.to("txt_"+i, .2, {opacity:1, delay: .1*i, ease: Expo.easeOut});
@@ -71,12 +72,13 @@ home_animation = (function() {
 
 
    var x;
-    for (x = 1; x < 22; x++) {
+    for (x = 0; x < 13; x++) {
       var j = x+2
 
      		TweenLite.to("txt_"+x, .2, {opacity:0, delay: .1*j, ease: Expo.easeOut});
 
     	}
+
 
 		TweenLite.delayedCall(3.6, frame2);
 	}
@@ -84,7 +86,8 @@ home_animation = (function() {
 	function frame2()
 	{
 
-		TweenLite.to(textHolder, 0.2, {opacity: 0, top:0, delay:0});
+		TweenLite.to(textHolder, 0.2, {opacity:0, delay:0});
+		TweenLite.to(green, 0.2, {left:0, delay:0});	
 		TweenLite.to(green, 0.2, {left:0, delay:0});	
 		TweenLite.to(green, 0.2, {opacity:0, delay:0});
 		TweenLite.to(lady, 0.2, {opacity:0, delay:0});	
@@ -97,8 +100,8 @@ home_animation = (function() {
 	function frame3()
 	{	
 
-		TweenLite.to(can, 0.2, {delay: 0, top:0, ease: Expo.easeOut}); 
-		TweenLite.to(water, 0.5, {delay: 0, opacity:1, top:0, scaleX:1, scaleY:1, ease: Expo.easeOut}); 
+		TweenLite.to(can, 0.2, {delay: 0, top:-82, left:-55, ease: Expo.easeOut}); 
+		TweenLite.to(water, 0.5, {delay: 0, opacity:1, top:-74, left:128, scaleX:1, scaleY:1, ease: Expo.easeOut}); 
 		//TweenLite.to(water_out, 0.3, {delay: 0, opacity:0, top:0, scaleX:2, scaleY:2, ease: Expo.easeOut}); 
 
 		TweenLite.delayedCall(3, frame4);	
@@ -116,14 +119,15 @@ home_animation = (function() {
 	function frame5()
 	{	
 
-		TweenLite.to(endWater, 0.5, {left:0, top:0, scaleX:1, scaleY:1, opacity:1, delay:0.3, ease: Expo.easeOut});
+		TweenLite.to(endWater, 0.3, {left:0, top:0, scaleX:1, scaleY:1, opacity:1, delay:0.2, ease: Expo.easeOut});
 		//TweenLite.to(endWater_two, 0.5, {left:0, top:0, scaleX:2, scaleY:2, opacity:0, delay:0.3, ease: Expo.easeOut});
 
 		TweenLite.to(product, 0.3, {left:0, delay:0, ease: Expo.easeOut});
-		TweenLite.to(all_good, 0.2, {opacity:1, left:0, delay:0.1});		
+		TweenLite.to(all_good, 0.3, {opacity:1, delay:1.3});		
 		TweenLite.to(text_0, 0.5, {opacity:1, left:0, delay:0.2});		
 		TweenLite.to(text_1, 0.5, {opacity:1, left:0, delay:0.4});		
-		TweenLite.to(text_2, 0.5, {opacity:1, left:0, delay:0.8});		
+		TweenLite.to(text_2, 0.5, {opacity:1, left:0, delay:0.8});	
+		TweenLite.to(logo, 0.2, {opacity:1, delay:1});	
 		TweenLite.to(available, 0.5, {opacity:1, delay:2});	
 	}
 
